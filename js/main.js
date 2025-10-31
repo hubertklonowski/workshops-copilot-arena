@@ -85,7 +85,8 @@ class Particle {
     }
     
     draw() {
-        ctx.fillStyle = `rgba(0, 120, 212, ${this.opacity})`;
+        // Egyptian gold color for particles
+        ctx.fillStyle = `rgba(212, 160, 23, ${this.opacity})`;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
@@ -108,7 +109,8 @@ function connectParticles() {
             
             if (distance < 120) {
                 const opacity = (1 - distance / 120) * 0.2;
-                ctx.strokeStyle = `rgba(0, 120, 212, ${opacity})`;
+                // Egyptian gold connections
+                ctx.strokeStyle = `rgba(212, 160, 23, ${opacity})`;
                 ctx.lineWidth = 1;
                 ctx.beginPath();
                 ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
@@ -181,7 +183,7 @@ copyButtons.forEach(button => {
             button.innerHTML = '<i class="fas fa-check"></i>';
             button.classList.add('copied');
             
-            // Trigger small confetti burst
+            // Trigger small confetti burst with Egyptian colors
             confetti({
                 particleCount: 50,
                 spread: 60,
@@ -189,7 +191,7 @@ copyButtons.forEach(button => {
                     x: button.getBoundingClientRect().left / window.innerWidth,
                     y: button.getBoundingClientRect().top / window.innerHeight
                 },
-                colors: ['#0078d4', '#00bcf2', '#7fba00']
+                colors: ['#d4a017', '#f2c75c', '#c4853f', '#8b4513']
             });
             
             setTimeout(() => {
@@ -206,12 +208,12 @@ copyButtons.forEach(button => {
 // Confetti Effects
 // ===========================
 function triggerWelcomeConfetti() {
-    // Initial welcome confetti
+    // Initial welcome confetti with Egyptian colors
     confetti({
         particleCount: 100,
         spread: 70,
         origin: { y: 0.6 },
-        colors: ['#0078d4', '#00bcf2', '#f25022', '#7fba00']
+        colors: ['#d4a017', '#f2c75c', '#c4853f', '#8b4513']
     });
     
     // Second burst
@@ -221,7 +223,7 @@ function triggerWelcomeConfetti() {
             angle: 60,
             spread: 55,
             origin: { x: 0 },
-            colors: ['#0078d4', '#00bcf2']
+            colors: ['#d4a017', '#f2c75c']
         });
     }, 250);
     
@@ -232,18 +234,18 @@ function triggerWelcomeConfetti() {
             angle: 120,
             spread: 55,
             origin: { x: 1 },
-            colors: ['#f25022', '#7fba00']
+            colors: ['#c4853f', '#8b4513']
         });
     }, 400);
 }
 
 function triggerContactConfetti() {
-    // Subtle confetti when entering contact section
+    // Subtle confetti when entering contact section with Egyptian colors
     confetti({
         particleCount: 30,
         spread: 50,
         origin: { y: 0.7 },
-        colors: ['#0078d4', '#00bcf2'],
+        colors: ['#d4a017', '#f2c75c'],
         ticks: 200
     });
 }
@@ -270,7 +272,7 @@ certCards.forEach(card => {
             particleCount: 30,
             spread: 50,
             origin: { x, y },
-            colors: ['#0078d4', '#00bcf2', '#7fba00']
+            colors: ['#d4a017', '#f2c75c', '#c4853f']
         });
     });
 });

@@ -1,20 +1,22 @@
 /* ===========================
-   CSS Custom Properties
+   CSS Custom Properties - Egyptian Theme
    =========================== */
 :root {
-    --color-primary: #0078d4;
-    --color-primary-light: #50a3e8;
-    --color-primary-dark: #005a9e;
-    --color-secondary: #00bcf2;
-    --color-accent: #f25022;
-    --color-success: #7fba00;
+    /* Egyptian Gold and Desert Colors */
+    --color-primary: #d4a017;
+    --color-primary-light: #f2c75c;
+    --color-primary-dark: #b8860b;
+    --color-secondary: #c4853f;
+    --color-accent: #8b4513;
+    --color-success: #228b22;
     
-    --color-bg: #0a0e27;
-    --color-bg-light: #161b33;
-    --color-bg-card: #1e2442;
-    --color-text: #e4e4e7;
-    --color-text-muted: #a1a1aa;
-    --color-border: #27293d;
+    /* Desert Sand and Night Sky */
+    --color-bg: #1a1410;
+    --color-bg-light: #2d2419;
+    --color-bg-card: #3d2f1f;
+    --color-text: #f5e6d3;
+    --color-text-muted: #c9b99a;
+    --color-border: #5c4a35;
     
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     
@@ -22,9 +24,9 @@
     --transition-normal: 0.3s ease;
     --transition-slow: 0.5s ease;
     
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.3);
-    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 32px rgba(212, 160, 23, 0.3);
     
     --border-radius: 12px;
     --border-radius-sm: 8px;
@@ -45,12 +47,103 @@ html {
 
 body {
     font-family: var(--font-family);
-    background-color: var(--color-bg);
+    background: linear-gradient(to bottom, #1a1410 0%, #2d1810 50%, #3d2415 100%);
     color: var(--color-text);
     line-height: 1.6;
     overflow: hidden;
     width: 100vw;
     height: 100vh;
+    position: relative;
+}
+
+/* Egyptian Desert Background */
+body::before {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, #c4a575 0%, #d4b896 50%, transparent 100%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Pyramids Background */
+.pyramids {
+    position: fixed;
+    bottom: 15%;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.pyramid {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+}
+
+.pyramid--large {
+    border-width: 0 150px 250px 150px;
+    border-color: transparent transparent #8b7355 transparent;
+    left: 10%;
+}
+
+.pyramid--large::before {
+    content: '';
+    position: absolute;
+    bottom: -250px;
+    left: -75px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 75px 250px 75px;
+    border-color: transparent transparent #6d5b47 transparent;
+}
+
+.pyramid--medium {
+    border-width: 0 100px 180px 100px;
+    border-color: transparent transparent #9a8366 transparent;
+    right: 20%;
+}
+
+.pyramid--small {
+    border-width: 0 60px 120px 60px;
+    border-color: transparent transparent #7a6951 transparent;
+    right: 35%;
+}
+
+/* Camel Animation */
+.camel {
+    position: fixed;
+    bottom: 18%;
+    width: 80px;
+    height: 60px;
+    z-index: 2;
+    pointer-events: none;
+    animation: camelWalk 60s linear infinite;
+}
+
+@keyframes camelWalk {
+    0% {
+        left: -100px;
+    }
+    100% {
+        left: calc(100% + 100px);
+    }
+}
+
+.camel svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 /* Respect reduced motion preference */
