@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hubert Kłonowski - Senior Azure Developer portfolio showcasing 4 years of experience in cloud development, .NET, and Azure solutions">
+    <meta property="og:title" content="Hubert Kłonowski - Senior Azure Developer">
+    <meta property="og:description" content="Portfolio of Senior Azure Developer with expertise in .NET, Azure, Kubernetes, and cloud solutions">
+    <meta property="og:type" content="website">
+    
+    <title>Hubert Kłonowski - Senior Azure Developer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Tabs -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <button class="nav__tab nav__tab--active" data-section="hero" aria-label="Go to home section">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </button>
+        <button class="nav__tab" data-section="about" aria-label="Go to about section">
+            <i class="fas fa-user"></i>
+            <span>About</span>
+        </button>
+        <button class="nav__tab" data-section="skills" aria-label="Go to skills section">
+            <i class="fas fa-code"></i>
+            <span>Skills</span>
+        </button>
+        <button class="nav__tab" data-section="experience" aria-label="Go to experience section">
+            <i class="fas fa-briefcase"></i>
+            <span>Experience</span>
+        </button>
+        <button class="nav__tab" data-section="education" aria-label="Go to education section">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Education</span>
+        </button>
+        <button class="nav__tab" data-section="contact" aria-label="Go to contact section">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+        </button>
+    </nav>
+
+    <!-- Particle Background Canvas -->
+    <canvas id="particles" aria-hidden="true"></canvas>
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- Hero Section -->
+        <section id="hero" class="section section--active" role="region" aria-label="Hero section">
+            <div class="hero">
+                <div class="hero__image-container">
+                    <img src="assets/profile-photo.svg" alt="Hubert Kłonowski professional photo" class="hero__image">
+                    <div class="hero__image-glow" aria-hidden="true"></div>
+                </div>
+                <h1 class="hero__name">
+                    <span class="hero__name-text">Hubert Kłonowski</span>
+                </h1>
+                <p class="hero__title">Senior Azure Developer</p>
+                <p class="hero__subtitle">Cloud Developer • Full-Stack Developer • DevOps Enthusiast</p>
+                <div class="hero__cta">
+                    <button class="btn btn--primary" data-section="contact" aria-label="Contact me">
+                        <i class="fas fa-paper-plane"></i> Get In Touch
+                    </button>
+                    <a href="https://www.linkedin.com/in/hklonowski" target="_blank" rel="noopener noreferrer" class="btn btn--secondary" aria-label="View LinkedIn profile">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/hubertklonowski" target="_blank" rel="noopener noreferrer" class="btn btn--secondary" aria-label="View GitHub profile">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section" role="region" aria-label="About section">
+            <div class="section__content">
+                <h2 class="section__title">About Me</h2>
+                <div class="about">
+                    <p class="about__text">
+                        Senior Azure Developer with <strong>4 years of professional experience</strong> in designing and implementing 
+                        cloud-native solutions. Currently working at <strong>SoftwareOne</strong>, where I develop 
+                        enterprise-grade applications.
+                    </p>
+                    <p class="about__text">
+                        My expertise spans across <strong>.NET development</strong>, <strong>Azure Cloud Developerure</strong>, 
+                        and <strong>Kubernetes orchestration</strong>. I've successfully delivered projects involving 
+                        secure development environments on AKS, multi-cloud spend management platforms serving over 9,000 
+                        enterprise customers, and AI-powered solutions using Azure OpenAI.
+                    </p>
+                    <p class="about__text">
+                        I hold <strong>5 active certifications</strong> including Azure Solution Architect Expert (AZ-305) 
+                        and Certified Kubernetes Application Developer (CKAD), demonstrating my commitment to continuous 
+                        learning and technical excellence.
+                    </p>
+                    <div class="about__highlights">
+                        <div class="highlight">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span><strong>4+</strong> Years Experience</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-certificate"></i>
+                            <span><strong>5</strong> Active Certifications</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-project-diagram"></i>
+                            <span><strong>10+</strong> Enterprise Projects</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section" role="region" aria-label="Skills section">
+            <div class="section__content">
+                <h2 class="section__title">Technical Skills</h2>
+                <div class="skills">
+                    <div class="skills__category">
+                        <h3 class="skills__category-title">
+                            <i class="fas fa-code"></i> Languages
+                        </h3>
+                        <div class="skills__list">
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <span class="skill__name">C#</span>
+                                    <span class="skill__level">Expert</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" data-progress="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <span class="skill__name">TypeScript</span>
+                                    <span class="skill__level">Advanced</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" data-progress="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <span class="skill__name">Python</span>
+                                    <span class="skill__level">Intermediate</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" data-progress="75"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <span class="skill__name">T-SQL</span>
+                                    <span class="skill__level">Advanced</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills__category">
+                        <h3 class="skills__category-title">
+                            <i class="fas fa-layer-group"></i> Frameworks & Tools
+                        </h3>
+                        <div class="skills__tags">
+                            <span class="tag">Angular</span>
+                            <span class="tag">React</span>
+                            <span class="tag">.NET Core</span>
+                            <span class="tag">MediatR</span>
+                            <span class="tag">Quartz</span>
+                            <span class="tag">AgGrid</span>
+                            <span class="tag">Flask/Quart</span>
+                        </div>
+                    </div>
+
+                    <div class="skills__category">
+                        <h3 class="skills__category-title">
+                            <i class="fas fa-cloud"></i> Platforms & Cloud
+                        </h3>
+                        <div class="skills__tags">
+                            <span class="tag tag--azure">Azure</span>
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Apache Kafka</span>
+                            <span class="tag">GitHub Actions</span>
+                            <span class="tag">Azure DevOps</span>
+                            <span class="tag">Terraform</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section" role="region" aria-label="Experience section">
+            <div class="section__content">
+                <h2 class="section__title">Professional Experience</h2>
+                <div class="timeline">
+                    <!-- SoftwareOne -->
+                    <article class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <div class="timeline__header">
+                                <h3 class="timeline__title">Senior Azure Developer</h3>
+                                <span class="timeline__company">SoftwareOne</span>
+                                <span class="timeline__location">
+                                    <i class="fas fa-map-marker-alt"></i> Warsaw, Poland
+                                </span>
+                                <span class="timeline__date">
+                                    <i class="fas fa-calendar"></i> January 2024 - Present
+                                </span>
+                            </div>
+                            <ul class="timeline__achievements">
+                                <li>Designed and implemented secure, on-demand cloud development environments on AKS with mixed Linux and Windows VMs</li>
+                                <li>Owned end-to-end delivery for a financial client: requirements capture, solution architecture, IaC, network/security baselines</li>
+                                <li>Led development of cash management platform for Fortune 500 FinTech customers as full-stack developer (.NET, Angular)</li>
+                                <li>Contributed to PyraCloud project, a multi-cloud spend management platform serving 9,000+ enterprise customers</li>
+                                <li>Developed chat bot applications utilizing Azure OpenAI, React and Flask/Quart</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Predica (2) -->
+                    <article class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <div class="timeline__header">
+                                <h3 class="timeline__title">.NET/Azure Developer</h3>
+                                <span class="timeline__company">Predica, a SoftwareOne company</span>
+                                <span class="timeline__location">
+                                    <i class="fas fa-map-marker-alt"></i> Warsaw, Poland
+                                </span>
+                                <span class="timeline__date">
+                                    <i class="fas fa-calendar"></i> October 2022 - January 2024
+                                </span>
+                            </div>
+                            <ul class="timeline__achievements">
+                                <li>Delivered task scheduling application working with AWS as full-stack developer (.NET, Angular, Kafka, PostgreSQL)</li>
+                                <li>Designed and implemented Azure Durable Functions orchestrator for managing long-running tasks</li>
+                                <li>Designed app at Microsoft Sustainability Hackathon using Angular, Ionic and Azure OpenAI</li>
+                                <li>Implemented observability for microservice-based systems using Grafana, OpenTelemetry</li>
+                                <li>Created and managed workflows in GitHub Actions and pipelines in Azure DevOps</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Predica (1) -->
+                    <article class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <div class="timeline__header">
+                                <h3 class="timeline__title">Junior .NET/Azure Developer</h3>
+                                <span class="timeline__company">Predica, a SoftwareOne company</span>
+                                <span class="timeline__location">
+                                    <i class="fas fa-map-marker-alt"></i> Warsaw, Poland
+                                </span>
+                                <span class="timeline__date">
+                                    <i class="fas fa-calendar"></i> June 2022 - October 2022
+                                </span>
+                            </div>
+                            <ul class="timeline__achievements">
+                                <li>Worked on integration platform processing sea transport documents with 300+ Azure resources</li>
+                                <li>Developed multiple front-end (React, Angular) and back-end (.NET) features</li>
+                                <li>Refactored and created tests for large .NET Core API (10k+ lines)</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- TietoEVRY -->
+                    <article class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <div class="timeline__header">
+                                <h3 class="timeline__title">Junior Software Engineer</h3>
+                                <span class="timeline__company">TietoEVRY</span>
+                                <span class="timeline__location">
+                                    <i class="fas fa-map-marker-alt"></i> Szczecin, Poland
+                                </span>
+                                <span class="timeline__date">
+                                    <i class="fas fa-calendar"></i> July 2021 - June 2022
+                                </span>
+                            </div>
+                            <ul class="timeline__achievements">
+                                <li>Worked on healthcare project managing patients' medical documentation as full-stack developer</li>
+                                <li>Created multiple features using .NET, Angular, and knockout.js</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section" role="region" aria-label="Education section">
+            <div class="section__content">
+                <h2 class="section__title">Education & Certifications</h2>
+                
+                <div class="education">
+                    <h3 class="education__subtitle">
+                        <i class="fas fa-graduation-cap"></i> Education
+                    </h3>
+                    <div class="education__items">
+                        <article class="education__item">
+                            <h4 class="education__degree">Master of Science in Computer Science</h4>
+                            <p class="education__school">West Pomeranian University Of Technology</p>
+                            <p class="education__specialty">Software Design Specialty</p>
+                            <p class="education__date">
+                                <i class="fas fa-calendar"></i> October 2023 - July 2025
+                            </p>
+                            <p class="education__location">
+                                <i class="fas fa-map-marker-alt"></i> Szczecin, Poland
+                            </p>
+                        </article>
+
+                        <article class="education__item">
+                            <h4 class="education__degree">Bachelor of Science in Computer Science</h4>
+                            <p class="education__school">West Pomeranian University Of Technology</p>
+                            <p class="education__specialty">Software Engineering Specialty</p>
+                            <p class="education__date">
+                                <i class="fas fa-calendar"></i> October 2019 - July 2023
+                            </p>
+                            <p class="education__location">
+                                <i class="fas fa-map-marker-alt"></i> Szczecin, Poland
+                            </p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="certificates">
+                    <h3 class="certificates__subtitle">
+                        <i class="fas fa-certificate"></i> Certifications
+                    </h3>
+                    <div class="certificates__grid">
+                        <div class="cert-card" data-cert="az-305">
+                            <div class="cert-card__front">
+                                <div class="cert-card__icon">
+                                    <i class="fab fa-microsoft"></i>
+                                </div>
+                                <h4 class="cert-card__title">AZ-305</h4>
+                                <p class="cert-card__name">Azure Solution Architect Expert</p>
+                                <p class="cert-card__date">Jan 2025 - Jan 2026</p>
+                            </div>
+                        </div>
+
+                        <div class="cert-card" data-cert="ckad">
+                            <div class="cert-card__front">
+                                <div class="cert-card__icon">
+                                    <i class="fas fa-dharmachakra"></i>
+                                </div>
+                                <h4 class="cert-card__title">CKAD</h4>
+                                <p class="cert-card__name">Certified Kubernetes Application Developer</p>
+                                <p class="cert-card__date">Apr 2024 - Apr 2027</p>
+                            </div>
+                        </div>
+
+                        <div class="cert-card" data-cert="az-104">
+                            <div class="cert-card__front">
+                                <div class="cert-card__icon">
+                                    <i class="fab fa-microsoft"></i>
+                                </div>
+                                <h4 class="cert-card__title">AZ-104</h4>
+                                <p class="cert-card__name">Azure Administrator</p>
+                                <p class="cert-card__date">Aug 2023 - Sep 2026</p>
+                            </div>
+                        </div>
+
+                        <div class="cert-card" data-cert="github">
+                            <div class="cert-card__front">
+                                <div class="cert-card__icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <h4 class="cert-card__title">GitHub Actions</h4>
+                                <p class="cert-card__name">GitHub Certified Partner</p>
+                                <p class="cert-card__date">Jan 2023 - Jan 2026</p>
+                            </div>
+                        </div>
+
+                        <div class="cert-card" data-cert="az-204">
+                            <div class="cert-card__front">
+                                <div class="cert-card__icon">
+                                    <i class="fab fa-microsoft"></i>
+                                </div>
+                                <h4 class="cert-card__title">AZ-204</h4>
+                                <p class="cert-card__name">Azure Developer Associate</p>
+                                <p class="cert-card__date">Mar 2022 - Mar 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="languages">
+                    <h3 class="languages__subtitle">
+                        <i class="fas fa-language"></i> Languages
+                    </h3>
+                    <div class="languages__list">
+                        <div class="language">
+                            <span class="language__name">Polish</span>
+                            <span class="language__level">Native</span>
+                        </div>
+                        <div class="language">
+                            <span class="language__name">English</span>
+                            <span class="language__level">C1 Level</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section" role="region" aria-label="Contact section">
+            <div class="section__content">
+                <h2 class="section__title">Get In Touch</h2>
+                <div class="contact">
+                    <p class="contact__intro">
+                        I'm always interested in hearing about new opportunities, projects, or just connecting 
+                        with fellow developers. Feel free to reach out!
+                    </p>
+
+                    <div class="contact__methods">
+                        <a href="mailto:hub3rd2@gmail.com" class="contact__card" aria-label="Send email">
+                            <div class="contact__icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact__info">
+                                <h3 class="contact__label">Email</h3>
+                                <p class="contact__value">hub3rd2@gmail.com</p>
+                            </div>
+                            <button class="contact__copy" data-copy="hub3rd2@gmail.com" aria-label="Copy email to clipboard">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/hklonowski" target="_blank" rel="noopener noreferrer" class="contact__card contact__card--social" aria-label="Visit LinkedIn profile">
+                            <div class="contact__icon contact__icon--linkedin">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="contact__info">
+                                <h3 class="contact__label">LinkedIn</h3>
+                                <p class="contact__value">linkedin.com/in/hklonowski</p>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/hubertklonowski" target="_blank" rel="noopener noreferrer" class="contact__card contact__card--social" aria-label="Visit GitHub profile">
+                            <div class="contact__icon contact__icon--github">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="contact__info">
+                                <h3 class="contact__label">GitHub</h3>
+                                <p class="contact__value">github.com/hubertklonowski</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="contact__footer">
+                        <p>Made with <i class="fas fa-heart"></i> using HTML, CSS & JavaScript</p>
+                        <p>Deployed on GitHub Pages</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
